@@ -23,7 +23,14 @@
         <div id="likesButtonContainer"></div>
         <script type="text/babel">
             const LikeButton = () => {
-                return "いいね";
+                const [liked, setLiked] = React.useState(false);
+                const toggleLiked = () => setLiked(!liked);
+
+                return (
+                    <button className="likeButtton" onClick={toggleLiked}>
+                        {liked ? "いいね済" : "いいね前"}
+                    </button>
+                );
             };
 
             // domContainer を定義
