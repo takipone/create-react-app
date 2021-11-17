@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>いいねボタン</title>
+        <meta charset="UTF-8" />
+        <script
+            crossorigin
+            src="https://unpkg.com/react@17/umd/react.development.js"
+        ></script>
+        <script
+            crossorigin
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+        ></script>
+
+        <!-- babelを読み込みことで、JSXを使うことができるようになる -->
+        <script
+            src="https://unpkg.com/babel-standalone@6/babel.min.js"
+        ></script>
+    </head>
+    <body>
+
+        <!-- Reactコンポーネントが表示されるDOMコンテナ -->
+        <div id="likesButtonContainer"></div>
+        <script type="text/babel">
+            const LikeButton = () => {
+                return "いいね";
+            };
+
+            // domContainer を定義
+            const domContainer = document.querySelector("#likesButtonContainer");
+
+            // React が LikeButton コンポーネントを DOM に変換して
+            // HTML の DOM コンテナに挿入する
+            ReactDOM.render(<LikeButton />, domContainer);
+        </script>
+    </body>
+</html>
